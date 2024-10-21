@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Task Management App</h1>
+        <p>Organize your tasks and stay productive!</p>
+    </header>
+
+    <hr>
+
+    <!-- Add New Task Section -->
+    <section id="add-task">
+        <h2>Add a New Task</h2>
+        <form action="#">
+            <label for="task-title">Task Title:</label>
+            <input type="text" id="task-title" name="task-title" placeholder="Enter task title" required><br><br>
+
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority" name="task-priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select><br><br>
+
+            <label for="task-deadline">Deadline:</label>
+            <input type="date" id="task-deadline" name="task-deadline" required><br><br>
+
+            <input type="submit" value="Add Task">
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Pending Tasks Section -->
+    <section id="pending-tasks">
+        <h2>Pending Tasks</h2>
+        <ul>
+            <li>
+                <strong>Task 1:</strong> Complete HTML layout
+                <p>Priority: High | Deadline: 2024-10-25</p>
+            </li>
+            <li>
+                <strong>Task 2:</strong> Write CSS for the homepage
+                <p>Priority: Medium | Deadline: 2024-10-28</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Completed Tasks Section -->
+    <section id="completed-tasks">
+        <h2>Completed Tasks</h2>
+        <ul>
+            <li>
+                <strong>Task 3:</strong> Research front-end frameworks
+                <p>Priority: Low | Completed on: 2024-10-10</p>
+            </li>
+            <li>
+                <strong>Task 4:</strong> Set up development environment
+                <p>Priority: High | Completed on: 2024-10-05</p>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Task Management App. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

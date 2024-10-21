@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+</head>
+<body>
+
+  <h1>Registration Form</h1>
+
+  <form action="/submit-form" method="POST">
+    
+    <!-- Text Input with required, minlength, and maxlength -->
+    <label for="name">Name (required, 3-20 characters):</label>
+    <input type="text" id="name" name="user_name" required minlength="3" maxlength="20">
+    <br><br>
+
+    <!-- Email with built-in validation -->
+    <label for="email">Email (required, must be valid):</label>
+    <input type="email" id="email" name="user_email" required>
+    <br><br>
+
+    <!-- Password with pattern validation (at least 8 characters, one number) -->
+    <label for="password">Password (required, 8+ characters, must include a number):</label>
+    <input type="password" id="password" name="user_password" required pattern="(?=.*\d).{8,}">
+    <br><br>
+
+    <!-- Number input with min and max values -->
+    <label for="age">Age (required, must be between 18 and 60):</label>
+    <input type="number" id="age" name="user_age" required min="18" max="60">
+    <br><br>
+
+    <!-- Phone number with pattern validation (specific format) -->
+    <label for="phone">Phone (required, format: 123-456-7890):</label>
+    <input type="tel" id="phone" name="user_phone" required pattern="\d{3}[-]\d{3}[-]\d{4}">
+    <br><br>
+
+    <!-- URL input with built-in validation -->
+    <label for="website">Website (optional, must be a valid URL):</label>
+    <input type="url" id="website" name="user_website">
+    <br><br>
+
+    <!-- Date input -->
+    <label for="dob">Date of Birth (required):</label>
+    <input type="date" id="dob" name="user_dob" required>
+    <br><br>
+
+    <!-- Dropdown with required selection -->
+    <label for="country">Country (required):</label>
+    <select id="country" name="user_country" required>
+      <option value="">--Select your country--</option>
+      <option value="usa">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="india">India</option>
+    </select>
+    <br><br>
+
+    <!-- Gender radio buttons with required validation -->
+    <label>Gender (required):</label>
+    <input type="radio" id="male" name="user_gender" value="male" required> Male
+    <input type="radio" id="female" name="user_gender" value="female" required> Female
+    <br><br>
+
+    <!-- Terms and conditions checkbox with required validation -->
+    <label for="terms">I agree to the Terms and Conditions (required):</label>
+    <input type="checkbox" id="terms" name="user_terms" required>
+    <br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+</html>
